@@ -51,17 +51,25 @@
                             </div>
                         </div>
 
-                        <div class="form-group row mb-0">
+                        <div class="form-group row">
                             <div class="col-md-8 offset-md-4">
                                 <button type="submit" class="btn btn-primary">
                                     {{ __('Login') }}
                                 </button>
 
-                                @if (Route::has('password.request'))
+                                @if(Route::has('password.request'))
                                     <a class="btn btn-link" href="{{ route('password.request') }}">
                                         {{ __('Forgot Your Password?') }}
                                     </a>
                                 @endif
+                            </div>
+                        </div>
+
+                        <div class="form-group row mb-0">
+                            <div class="col-md-4 offset-md-4">
+                                <a href="{{ route('home') }}" class="btn btn-sso">
+                                    <img src="{{ URL::asset('sso/sso-icon.png') }}" class="sso-icon"> Login with <b>SSO</b>
+                                </a>
                             </div>
                         </div>
                     </form>
@@ -71,3 +79,30 @@
     </div>
 </div>
 @endsection
+
+<style type="text/css">
+.btn.btn-sso {
+    color: #ffffff !important;
+    background-color: #8dc80e !important;
+    border-color: #8dc80e !important;
+    font-weight: 600;
+    border-radius: 3px;
+    outline: 0!important;
+    font-size: 14px;
+    padding: 8px 20px;
+    line-height: 1.5;
+    text-shadow: 0 1px 0 rgba(0,0,0,0.2);
+    text-align: center;
+    display: block;
+}
+
+.btn.btn-sso:hover {
+    background-color: #85bb10 !important;
+}
+
+.sso-icon {
+    margin-top: -4px;
+    width: 18px;
+    height: 18px;
+}
+</style>
