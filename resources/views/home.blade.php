@@ -7,7 +7,8 @@ $attr = array(
     'displayName' => Cas::getAttribute('displayName'),
     'givenName' => Cas::getAttribute('givenName'),
     'cn' => Cas::getAttribute('cn'),
-    'sn' => Cas::getAttribute('sn')
+    'sn' => Cas::getAttribute('sn'),
+    'mail' => Cas::getAttribute('mail'),
 );
 @endphp
 <div class="container">
